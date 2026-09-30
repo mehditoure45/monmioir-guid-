@@ -101,7 +101,7 @@ Chaque sujet part d'une phrase réellement tapée. Cocher quand c'est publié.
 - [x] Je ne veux pas une IA qui me donne toujours raison
 - [x] Je ne veux pas de conseils : aide-moi à comprendre ce que je ressens
 - [ ] Utiliser l'IA pour mieux se connaître
-- [ ] Aide-moi à trouver mes schémas : une IA pour repérer ce qui se répète
+- [x] Aide-moi à trouver mes schémas : une IA pour repérer ce qui se répète
 - [ ] Journaliser avec ChatGPT : écrire son journal avec une IA
 
 **Se comprendre**
