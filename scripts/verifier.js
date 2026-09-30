@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const SITE = path.join(__dirname, '..', 'site');
-const PAGES_HORS_ARTICLE = new Set(['index.html', '404.html', 'a-propos/index.html']);
+const PAGES_HORS_ARTICLE = new Set(['index.html', '404.html', 'a-propos/index.html', 'en/index.html']);
 const SUJETS_SENSIBLES = /suicid|idées noires|pensées sombres|dépression|deuil|automutil|se faire du mal|envie de mourir|anxiété|crise d'angoisse|burn-?out|épuisement/i;
 
 const erreurs = [];

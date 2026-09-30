@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mon Miroir in English: the AI that questions you | Waitlist</title>
+<meta name="description" content="Mon Miroir is an AI for self-reflection that asks the right questions, one at a time, so your own answers emerge. Join the waitlist for the English version.">
+<link rel="canonical" href="https://guide.monmiroir.net/en/">
+<link rel="alternate" hreflang="en" href="https://guide.monmiroir.net/en/">
+<link rel="alternate" hreflang="fr" href="https://guide.monmiroir.net/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mon Miroir in English: the AI that questions you">
+<meta property="og:description" content="Not an AI that analyzes you. An AI that helps you understand yourself. Join the waitlist for the English version.">
+<meta property="og:url" content="https://guide.monmiroir.net/en/">
+<meta property="og:image" content="https://monmiroir.net/og-image.jpg">
+<meta property="og:locale" content="en_US">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" type="image/png" href="/assets/logo.png">
+<style>
+.attente { background: var(--carte, #161624); border-radius: 16px; padding: 24px; margin: 28px 0; }
+.attente label { display: block; margin: 10px 0 6px; }
+.attente input[type=email], .attente select { width: 100%; box-sizing: border-box; padding: 12px 14px; border-radius: 10px; border: 1px solid #33334a; background: #0f0f1a; color: inherit; font-size: 16px; }
+.attente .accord { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; margin: 16px 0; }
+.attente button { width: 100%; padding: 14px; border: 0; border-radius: 999px; background: #fff; color: #0b0b12; font-weight: 600; font-size: 16px; cursor: pointer; }
+.attente .cache { position: absolute; left: -9999px; }
+.attente small { display: block; margin-top: 12px; opacity: .7; }
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="/"><img src="/assets/logo.png" alt="Mon Miroir logo" width="32" height="32">Mon Miroir <span>guides</span></a>
+  <nav><a href="/">Guides (FR)</a></nav>
+</div></header>
+
+<main><div class="wrap">
+  <h1>Mon Miroir, the AI that questions you</h1>
+  <p class="lead">It doesn't give you the answer. It asks the right questions, one at a time, so your own answers emerge. Mon Miroir is available in French today. The English version is coming.</p>
+
+  <form class="attente" method="post" action="/api/liste-attente">
+    <h2>Join the waitlist</h2>
+    <p>Be the first to know when Mon Miroir speaks your language.</p>
+    <label for="email">Your email</label>
+    <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+    <label for="langue">Your language</label>
+    <select id="langue" name="langue">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="it">Italiano</option>
+      <option value="pt">Português</option>
+      <option value="autre">Other</option>
+    </select>
+    <input type="hidden" name="source" value="page-en">
+    <input class="cache" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label class="accord"><input type="checkbox" name="accord" value="oui" required> <span>Email me once when Mon Miroir is available in my language. My address is used for nothing else and I can ask for it to be deleted at any time.</span></label>
+    <button type="submit">Join the waitlist</button>
+    <small>No spam. One email at launch. <a href="https://monmiroir.net/privacy">Privacy policy</a>.</small>
+  </form>
+
+  <h2>What Mon Miroir does</h2>
+  <ul>
+    <li><strong>One question at a time</strong>, built on your previous answer, digging where you stayed vague.</li>
+    <li><strong>Guided journeys</strong> on emotions, relationships, self-confidence, decisions and work.</li>
+    <li><strong>A mirror sentence</strong> at the end of each journey: a summary of what you just understood, in your own words.</li>
+    <li><strong>A memory</strong> of your reflections over time, and an <strong>inner map</strong> of your patterns, emotions, relationships and decisions.</li>
+  </ul>
+  <p>Not an AI that analyzes you. An AI that helps you understand yourself. No advice, no diagnosis: a mirror, not a guru.</p>
+  <p><em>Mon Miroir is a self-reflection tool, not a medical device, and it does not replace a health professional.</em></p>
+  <p>Already fluent in French? <a href="https://monmiroir.net/app?s=guide-en">Try Mon Miroir now</a>.</p>
+</div></main>
+
+<footer class="site-footer"><div class="wrap">
+  <p><strong>Mon Miroir</strong>, the AI that questions you. Made in France by Mehdi Touré.</p>
+  <p><a href="https://monmiroir.net/privacy">Privacy</a> · <a href="https://monmiroir.net/mentions-legales">Legal</a></p>
+</div></footer>
+</body>
+</html>
