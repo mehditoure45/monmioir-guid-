@@ -94,7 +94,7 @@ Chaque sujet part d'une phrase réellement tapée. Cocher quand c'est publié.
 - [ ] Qui suis-je vraiment : questions pour se connaître
 
 **Travail**
-- [ ] Je ne sais plus ce que je veux dans mon travail
+- [x] Je ne sais plus ce que je veux dans mon travail
 - [ ] Je n'ai plus de motivation au travail et je ne sais pas pourquoi
 - [ ] Changer de métier : comment savoir si c'est la bonne décision
 - [ ] Syndrome de l'imposteur : comprendre d'où il vient chez toi
