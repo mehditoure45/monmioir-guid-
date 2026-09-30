@@ -74,8 +74,8 @@ Longueur visée : 1 200 à 1 800 mots. Fichier : `site/<slug>/index.html`, slug 
 ## Circuit de validation
 
 1. L'agent écrit l'article sur une nouvelle branche et ouvre une pull request.
-2. Cloudflare génère automatiquement un lien d'aperçu : Mehdi lit l'article sur son téléphone.
-3. Mehdi valide en fusionnant la pull request (bouton « Merge »), et l'article est en ligne dans la minute. Ou il laisse un commentaire, et l'agent corrige.
+2. L'agent envoie à Mehdi un aperçu de l'article à lire sur son téléphone.
+3. Mehdi valide en fusionnant la pull request (bouton « Merge »), et l'article est en ligne en une à deux minutes. Ou il laisse un commentaire, et l'agent corrige.
 
 Rien n'est publié sans la validation de Mehdi.
 
