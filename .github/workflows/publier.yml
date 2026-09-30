@@ -21,3 +21,11 @@ jobs:
           git add -A
           git commit -q -m "Publication du site"
           git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" gh-pages
+      - name: Prévenir Bing et les moteurs IndexNow des pages publiées
+        run: |
+          sleep 60
+          KEY=$(ls site | grep -E '^[0-9a-f]{32}.txt$' | sed 's/.txt$//' | head -1)
+          URLS=$(grep -o '<loc>[^<]*</loc>' site/sitemap.xml | sed -e 's/<loc>//' -e 's/<\/loc>//' | sed 's/.*/"&"/' | paste -sd, -)
+          curl -s -o /dev/null -w "IndexNow : %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"guide.monmiroir.net\",\"key\":\"$KEY\",\"keyLocation\":\"https://guide.monmiroir.net/$KEY.txt\",\"urlList\":[$URLS]}"

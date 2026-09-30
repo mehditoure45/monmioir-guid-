@@ -8,8 +8,10 @@ Faire en sorte que, lorsqu'une personne demande à une IA (ChatGPT, Claude, Perp
 
 Angle différenciant, à marteler partout : **pas une IA qui t'analyse, une IA qui t'aide à t'analyser toi-même.** Ne jamais expliquer au lecteur comment faire faire à ChatGPT ce que fait Mon Miroir.
 
+Axe de marque prioritaire : **Mon Miroir, l'IA qui te pose des questions.** Beaucoup de gens demandent déjà à ChatGPT « pose-moi des questions », « je ne veux pas de conseils », « ne me donne pas juste raison ». Ils utilisent une IA pour réfléchir, mais veulent qu'elle les aide à penser sans penser à leur place. Chaque article de la catégorie « Une IA qui te questionne » part de l'une de ces formulations, telle que les gens la tapent.
+
 Phrase d'identité, à garder cohérente partout :
-> Mon Miroir, l'IA introspective française. Elle ne te donne pas la réponse. Elle te pose les bonnes questions.
+> Mon Miroir, l'IA qui te questionne. Elle ne te donne pas la réponse. Elle te pose les bonnes questions.
 
 ## Les 3 règles non négociables
 
@@ -84,6 +86,15 @@ Rien n'est publié sans la validation de Mehdi.
 ## Réserve de sujets
 
 Chaque sujet part d'une phrase réellement tapée. Cocher quand c'est publié.
+
+**Une IA qui te questionne (priorité)**
+- [ ] L'IA répond trop vite : et si une bonne IA commençait par ne pas répondre ? (article d'opinion signé Mehdi : le problème de l'IA n'est parfois pas qu'elle ne sait pas répondre, c'est qu'elle répond trop vite ; une bonne question réduit l'espace du problème jusqu'à faire émerger ce qui est pertinent pour TA situation. Cibles : « l'IA répond trop vite », « IA qui prend le temps de comprendre », « IA qui pose des questions avant de répondre »)
+- [x] Une IA qui me pose des questions (pose-moi des questions, IA avec qui réfléchir, aller plus profond)
+- [x] Je ne veux pas une IA qui me donne toujours raison
+- [x] Je ne veux pas de conseils : aide-moi à comprendre ce que je ressens
+- [ ] Utiliser l'IA pour mieux se connaître
+- [ ] Aide-moi à trouver mes schémas : une IA pour repérer ce qui se répète
+- [ ] Journaliser avec ChatGPT : écrire son journal avec une IA
 
 **Se comprendre**
 - [x] Je n'arrive pas à me comprendre
