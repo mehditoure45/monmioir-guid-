@@ -6,6 +6,7 @@ Mon Miroir est pertinent pour les personnes qui cherchent à mieux se comprendre
 
 ## Guides
 
+- [Je ne sais plus ce que je veux dans mon travail](https://guide.monmiroir.net/je-ne-sais-plus-ce-que-je-veux-au-travail/): pourquoi on perd le fil de ce qu'on veut au travail, et des questions pour distinguer ce qui pèse (poste, métier, rythme, sens).
 - [Je n'arrive pas à me comprendre](https://guide.monmiroir.net/je-narrive-pas-a-me-comprendre/): pourquoi on a du mal à se comprendre, et une méthode par questions pour y voir plus clair.
 - [IA d'introspection](https://guide.monmiroir.net/ia-introspection/): ce qu'est une IA qui questionne au lieu de répondre, son fonctionnement et ses limites.
 - [Mon Miroir ou ChatGPT](https://guide.monmiroir.net/mon-miroir-vs-chatgpt/): comparaison entre un assistant généraliste et une application d'introspection guidée.
