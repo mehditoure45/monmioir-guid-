@@ -57,7 +57,7 @@ Tout le site est dans le dossier `site/`. Copier la structure de `site/je-narriv
 3. **« En bref »** (`.answer`) : la réponse complète en 3 à 5 phrases. C'est le passage que les IA reprennent : il doit tenir seul.
 4. Le corps : à quoi ça ressemble, pourquoi ça arrive, ce qui aide. Des titres `h2` formulés comme des questions ou des idées claires.
 5. **« Essaie maintenant »** : 3 à 5 questions dans le bloc `.questions`.
-6. La présentation de Mon Miroir, reliée au sujet de l'article, puis l'encadré `.cta` avec le lien `https://monmiroir.net/app?s=guide-<slug>` (le suivi des clics en dépend).
+6. La présentation de Mon Miroir, reliée au sujet de l'article, puis l'encadré `.cta` avec les deux boutons App Store et Google Play (bloc `.store-buttons`, copié d'un article existant ; dans le lien Google Play, remplacer le slug après `utm_campaign%3D`, c'est ce qui permet de savoir quel article amène des installations). Le pied de page contient aussi ces boutons sur chaque page.
 7. L'encadré `.care` si le sujet est sensible.
 8. Une FAQ de 3 à 5 questions, reprises à l'identique dans le JSON-LD `FAQPage`.
 9. « À lire aussi » : 2 ou 3 liens vers d'autres guides.
