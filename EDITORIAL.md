@@ -10,8 +10,10 @@ Angle différenciant, à marteler partout : **pas une IA qui t'analyse, une IA q
 
 Axe de marque prioritaire : **Mon Miroir, l'IA qui te pose des questions.** Beaucoup de gens demandent déjà à ChatGPT « pose-moi des questions », « je ne veux pas de conseils », « ne me donne pas juste raison ». Ils utilisent une IA pour réfléchir, mais veulent qu'elle les aide à penser sans penser à leur place. Chaque article de la catégorie « Une IA qui te questionne » part de l'une de ces formulations, telle que les gens la tapent.
 
+Finalité de chaque article : provoquer une prise de conscience. Les guides sont des guides de questionnement : ils mettent en lumière ce qui existe déjà chez la personne, par les questions qu'elle se pose sur elle-même. On ne lui apprend pas qui elle est, on l'aide à le voir.
+
 Phrase d'identité, à garder cohérente partout :
-> Mon Miroir, l'IA qui te questionne. Elle ne te donne pas la réponse. Elle te pose les bonnes questions.
+> Mon Miroir, l'IA qui te questionne. Elle ne te donne pas la réponse. Elle te pose les bonnes questions, qui font apparaître tes propres réponses.
 
 ## Les 3 règles non négociables
 
