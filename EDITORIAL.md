@@ -79,11 +79,11 @@ Longueur visée : 1 200 à 1 800 mots. Fichier : `site/<slug>/index.html`, slug 
 
 Mehdi ne relit pas les articles : l'objectif est de publier chaque jour sans lui.
 
-1. L'agent écrit l'article sur une branche .
-2. Avant d'ouvrir la demande de fusion, il lance ✅ 12 pages vérifiées, aucun problème. et réécrit l'article jusqu'à ce que le contrôle passe.
+1. L'agent écrit l'article sur une branche `article/auto-AAAA-MM-JJ`.
+2. Avant d'ouvrir la demande de fusion, il lance `node scripts/verifier.js` et réécrit l'article jusqu'à ce que le contrôle passe.
 3. Il ouvre la demande de fusion. Le workflow « Publication automatique » relance le même contrôle, fusionne et publie.
 4. Si le contrôle échoue malgré tout, l'agent corrige sur la même branche (chaque correction relance le contrôle). L'agent du lendemain commence toujours par réparer une demande « article/auto-* » restée ouverte.
-5. Sujets sensibles : autorisés, mais le contrôleur exige l'encadré  avec le 3114 et refuse toute promesse de soin ou de diagnostic.
+5. Sujets sensibles : autorisés, mais le contrôleur exige l'encadré `.care` avec le 3114 et refuse toute promesse de soin ou de diagnostic.
 
 ## Réserve de sujets
 
