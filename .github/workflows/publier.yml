@@ -1,8 +1,10 @@
-# Publie le dossier site/ sur la branche gh-pages à chaque mise à jour de main.
+# Publie le dossier site/ sur la branche gh-pages à chaque mise à jour de main
+# (ou quand la publication automatique l'appelle après une fusion).
 name: Publier le site
 on:
   push:
     branches: [main]
+  workflow_call:
 permissions:
   contents: write
 jobs:
@@ -10,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Publier site/ sur gh-pages
         run: |
           cd site

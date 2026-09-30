@@ -75,13 +75,15 @@ Longueur visée : 1 200 à 1 800 mots. Fichier : `site/<slug>/index.html`, slug 
 - `site/index.html` : ajouter une carte dans « Les guides », article le plus récent en haut.
 - Ajouter un lien vers le nouvel article dans 1 ou 2 articles existants proches.
 
-## Circuit de validation
+## Circuit de publication (automatique, décidé par Mehdi le 30/09/2026)
 
-1. L'agent écrit l'article sur une nouvelle branche et ouvre une pull request.
-2. L'agent envoie à Mehdi un aperçu de l'article à lire sur son téléphone.
-3. Mehdi valide en fusionnant la pull request (bouton « Merge »), et l'article est en ligne en une à deux minutes. Ou il laisse un commentaire, et l'agent corrige.
+Mehdi ne relit pas les articles : l'objectif est de publier chaque jour sans lui.
 
-Rien n'est publié sans la validation de Mehdi.
+1. L'agent écrit l'article sur une branche .
+2. Avant d'ouvrir la demande de fusion, il lance ✅ 12 pages vérifiées, aucun problème. et réécrit l'article jusqu'à ce que le contrôle passe.
+3. Il ouvre la demande de fusion. Le workflow « Publication automatique » relance le même contrôle, fusionne et publie.
+4. Si le contrôle échoue malgré tout, l'agent corrige sur la même branche (chaque correction relance le contrôle). L'agent du lendemain commence toujours par réparer une demande « article/auto-* » restée ouverte.
+5. Sujets sensibles : autorisés, mais le contrôleur exige l'encadré  avec le 3114 et refuse toute promesse de soin ou de diagnostic.
 
 ## Réserve de sujets
 
