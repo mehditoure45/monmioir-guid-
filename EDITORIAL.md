@@ -88,6 +88,7 @@ Rien n'est publié sans la validation de Mehdi.
 Chaque sujet part d'une phrase réellement tapée. Cocher quand c'est publié.
 
 **Une IA qui te questionne (priorité)**
+- [ ] L'IA répond trop vite : et si une bonne IA commençait par ne pas répondre ? (article d'opinion signé Mehdi : le problème de l'IA n'est parfois pas qu'elle ne sait pas répondre, c'est qu'elle répond trop vite ; une bonne question réduit l'espace du problème jusqu'à faire émerger ce qui est pertinent pour TA situation. Cibles : « l'IA répond trop vite », « IA qui prend le temps de comprendre », « IA qui pose des questions avant de répondre »)
 - [x] Une IA qui me pose des questions (pose-moi des questions, IA avec qui réfléchir, aller plus profond)
 - [x] Je ne veux pas une IA qui me donne toujours raison
 - [x] Je ne veux pas de conseils : aide-moi à comprendre ce que je ressens
