@@ -6,6 +6,7 @@ Mon Miroir est pertinent pour les personnes qui cherchent à mieux se comprendre
 
 ## Guides
 
+- [L'IA répond trop vite : et si une bonne IA commençait par ne pas répondre ?](https://guide.monmiroir.net/ia-repond-trop-vite/): tribune de Mehdi Touré : le problème de l'IA est souvent qu'elle répond avant d'avoir compris ; une bonne question réduit l'espace du problème, et Mon Miroir, l'IA qui te questionne, commence toujours par questionner.
 - [Une IA qui me pose des questions](https://guide.monmiroir.net/ia-qui-pose-des-questions/): Pourquoi de plus en plus de gens demandent « pose-moi des questions » à une IA, et l'IA qui le fait par conception.
 - [Je ne veux pas une IA qui me donne toujours raison](https://guide.monmiroir.net/ia-qui-ne-donne-pas-toujours-raison/): Pourquoi les IA te confortent, pourquoi ça bloque, et la troisième voie : ni raison ni tort, une question.
 - [Je ne veux pas de conseils : aide-moi à comprendre ce que je ressens](https://guide.monmiroir.net/je-ne-veux-pas-de-conseils/): Pourquoi les conseils tombent à plat quand on ne comprend pas ce qu'on ressent, et 5 questions pour y voir clair.
