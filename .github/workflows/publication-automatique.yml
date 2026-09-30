@@ -1,0 +1,32 @@
+# Publication automatique des articles écrits par l'agent quotidien.
+# Toute demande de fusion venant d'une branche article/auto-* est vérifiée par
+# scripts/verifier.js puis fusionnée et publiée. Si le contrôle échoue, l'agent
+# corrige l'article sur la même branche : chaque correction relance le contrôle.
+name: Publication automatique
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+    branches: [main]
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: publication-automatique
+  cancel-in-progress: false
+jobs:
+  verifier-et-fusionner:
+    if: startsWith(github.head_ref, 'article/auto-')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Contrôle qualité
+        run: node scripts/verifier.js
+      - name: Fusionner dans main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --squash --delete-branch
+  publier:
+    needs: verifier-et-fusionner
+    uses: ./.github/workflows/publier.yml

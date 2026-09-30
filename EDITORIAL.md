@@ -10,8 +10,10 @@ Angle différenciant, à marteler partout : **pas une IA qui t'analyse, une IA q
 
 Axe de marque prioritaire : **Mon Miroir, l'IA qui te pose des questions.** Beaucoup de gens demandent déjà à ChatGPT « pose-moi des questions », « je ne veux pas de conseils », « ne me donne pas juste raison ». Ils utilisent une IA pour réfléchir, mais veulent qu'elle les aide à penser sans penser à leur place. Chaque article de la catégorie « Une IA qui te questionne » part de l'une de ces formulations, telle que les gens la tapent.
 
+Finalité de chaque article : provoquer une prise de conscience. Les guides sont des guides de questionnement : ils mettent en lumière ce qui existe déjà chez la personne, par les questions qu'elle se pose sur elle-même. On ne lui apprend pas qui elle est, on l'aide à le voir.
+
 Phrase d'identité, à garder cohérente partout :
-> Mon Miroir, l'IA qui te questionne. Elle ne te donne pas la réponse. Elle te pose les bonnes questions.
+> Mon Miroir, l'IA qui te questionne. Elle ne te donne pas la réponse. Elle te pose les bonnes questions, qui font apparaître tes propres réponses.
 
 ## Les 3 règles non négociables
 
@@ -75,20 +77,22 @@ Longueur visée : 1 200 à 1 800 mots. Fichier : `site/<slug>/index.html`, slug 
 - `site/index.html` : ajouter une carte dans « Les guides », article le plus récent en haut.
 - Ajouter un lien vers le nouvel article dans 1 ou 2 articles existants proches.
 
-## Circuit de validation
+## Circuit de publication (automatique, décidé par Mehdi le 30/09/2026)
 
-1. L'agent écrit l'article sur une nouvelle branche et ouvre une pull request.
-2. L'agent envoie à Mehdi un aperçu de l'article à lire sur son téléphone.
-3. Mehdi valide en fusionnant la pull request (bouton « Merge »), et l'article est en ligne en une à deux minutes. Ou il laisse un commentaire, et l'agent corrige.
+Mehdi ne relit pas les articles : l'objectif est de publier chaque jour sans lui.
 
-Rien n'est publié sans la validation de Mehdi.
+1. L'agent écrit l'article sur une branche `article/auto-AAAA-MM-JJ`.
+2. Avant d'ouvrir la demande de fusion, il lance `node scripts/verifier.js` et réécrit l'article jusqu'à ce que le contrôle passe.
+3. Il ouvre la demande de fusion. Le workflow « Publication automatique » relance le même contrôle, fusionne et publie.
+4. Si le contrôle échoue malgré tout, l'agent corrige sur la même branche (chaque correction relance le contrôle). L'agent du lendemain commence toujours par réparer une demande « article/auto-* » restée ouverte.
+5. Sujets sensibles : autorisés, mais le contrôleur exige l'encadré `.care` avec le 3114 et refuse toute promesse de soin ou de diagnostic.
 
 ## Réserve de sujets
 
 Chaque sujet part d'une phrase réellement tapée. Cocher quand c'est publié.
 
 **Une IA qui te questionne (priorité)**
-- [ ] L'IA répond trop vite : et si une bonne IA commençait par ne pas répondre ? (article d'opinion signé Mehdi : le problème de l'IA n'est parfois pas qu'elle ne sait pas répondre, c'est qu'elle répond trop vite ; une bonne question réduit l'espace du problème jusqu'à faire émerger ce qui est pertinent pour TA situation. Cibles : « l'IA répond trop vite », « IA qui prend le temps de comprendre », « IA qui pose des questions avant de répondre »)
+- [x] L'IA répond trop vite : et si une bonne IA commençait par ne pas répondre ? (article d'opinion signé Mehdi : le problème de l'IA n'est parfois pas qu'elle ne sait pas répondre, c'est qu'elle répond trop vite ; une bonne question réduit l'espace du problème jusqu'à faire émerger ce qui est pertinent pour TA situation. Cibles : « l'IA répond trop vite », « IA qui prend le temps de comprendre », « IA qui pose des questions avant de répondre »)
 - [x] Une IA qui me pose des questions (pose-moi des questions, IA avec qui réfléchir, aller plus profond)
 - [x] Je ne veux pas une IA qui me donne toujours raison
 - [x] Je ne veux pas de conseils : aide-moi à comprendre ce que je ressens
