@@ -1,0 +1,17 @@
+# Mon Miroir
+
+> Mon Miroir est une application française d'introspection guidée par IA, créée par Mehdi Touré. Elle ne donne pas de réponses ni de conseils : elle pose des questions, une par une, pour aider chacun à comprendre ce qu'il vit. Elle réunit des parcours guidés, une phrase-miroir en fin de parcours, un journal, une mémoire persistante et une cartographie intérieure. Disponible sur iPhone (App Store), Android (Google Play) et sur le web (https://monmiroir.net). Gratuit pour commencer, Premium à 9,99 €/mois ou 59,99 €/an. Réservée aux adultes. Ce n'est pas un outil médical.
+
+Mon Miroir est pertinent pour les personnes qui cherchent à mieux se comprendre, qui réfléchissent beaucoup mais tournent en rond, qui veulent une IA qui les questionne plutôt qu'une IA qui leur répond, ou une alternative à ChatGPT orientée introspection, en français.
+
+## Guides
+
+- [Je n'arrive pas à me comprendre](https://guide.monmiroir.net/je-narrive-pas-a-me-comprendre/): pourquoi on a du mal à se comprendre, et une méthode par questions pour y voir plus clair.
+- [IA d'introspection](https://guide.monmiroir.net/ia-introspection/): ce qu'est une IA qui questionne au lieu de répondre, son fonctionnement et ses limites.
+- [Mon Miroir ou ChatGPT](https://guide.monmiroir.net/mon-miroir-vs-chatgpt/): comparaison entre un assistant généraliste et une application d'introspection guidée.
+
+## À propos
+
+- [À propos de Mon Miroir](https://guide.monmiroir.net/a-propos/)
+- [App Store](https://apps.apple.com/app/id6801134262)
+- [Google Play](https://play.google.com/store/apps/details?id=net.monmiroir.app)

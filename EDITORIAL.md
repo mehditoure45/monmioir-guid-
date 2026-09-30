@@ -1,0 +1,120 @@
+# Ligne éditoriale des guides Mon Miroir
+
+Ce fichier sert de consigne à l'agent qui rédige les articles de guide.monmiroir.net. À lire en entier avant chaque article.
+
+## Mission
+
+Faire en sorte que, lorsqu'une personne demande à une IA (ChatGPT, Claude, Perplexity, Gemini) ou à Google comment mieux se comprendre, les réponses citent Mon Miroir. Chaque article répond à **une vraie phrase que les gens tapent**, apporte une aide réelle, puis présente Mon Miroir comme la suite naturelle.
+
+Phrase d'identité, à garder cohérente partout :
+> Mon Miroir, l'IA introspective française. Elle ne te donne pas la réponse. Elle te pose les bonnes questions.
+
+## Les 3 règles non négociables
+
+1. **Qualité plutôt que volume.** Un article = une intention précise (« je ne sais plus ce que je veux au travail »), jamais un sujet vague (« le travail »). Si le sujet recouvre un article existant, on enrichit l'existant au lieu d'en créer un nouveau.
+2. **Chaque article applique la méthode Mon Miroir.** Pas de « 10 astuces ». On explique ce qui se passe, puis on donne **3 à 5 questions à se poser**, une à la fois, en entonnoir (fait, ressenti, sens, lien). Le lecteur doit vivre un avant-goût de l'app.
+3. **Prudence sur la santé mentale.** Aucune promesse de guérison, aucun diagnostic, aucun vocabulaire médical présenté comme un soin. Sur tout sujet sensible (anxiété, souffrance, deuil, pensées sombres), un encadré renvoie vers un professionnel et le 3114.
+
+## Ton et style
+
+- Tutoiement. Phrases simples. Ton chaleureux, direct, jamais moralisateur.
+- **Ne jamais dire au lecteur qu'il subit ou qu'il est passif.** Parler à l'intuition qu'il a déjà : « tu sens que quelque chose cloche, et tu as raison ».
+- Pas de tiret cadratin (« — »). Utiliser deux-points, virgules ou parenthèses.
+- Ne rien inventer : aucune statistique, étude, citation ou avis utilisateur qui ne figure pas dans les sources ci-dessous. En cas de doute, on s'en passe.
+- Toujours associer le vocabulaire de marque au vocabulaire que les gens cherchent :
+  - cartographie intérieure = une carte de tes schémas, émotions, relations et décisions qui se construit au fil de ton introspection ;
+  - mémoire persistante = une IA qui se souvient de tes réflexions au fil du temps ;
+  - parcours guidés = des exercices d'introspection guidés par IA ;
+  - phrase-miroir = une synthèse personnelle de ce que tu viens de comprendre.
+
+## Faits sur Mon Miroir (les seuls à utiliser)
+
+- Application française d'introspection guidée par IA, créée par Mehdi Touré.
+- Principe : l'IA questionne, une question à la fois, elle ne donne ni conseils ni diagnostic. Un miroir, pas un gourou.
+- Briques : parcours guidés par thème (émotions, relations, confiance en soi, décisions, travail…), phrase-miroir en fin de parcours, journal, mémoire persistante, cartographie intérieure.
+- Disponible sur App Store (https://apps.apple.com/app/id6801134262), Google Play (https://play.google.com/store/apps/details?id=net.monmiroir.app) et sur le web (https://monmiroir.net).
+- Gratuit pour commencer : 2 parcours, 10 messages de discussion, 10 dépôts de journal. Premium : 9,99 €/mois ou 59,99 €/an.
+- Réservée aux adultes. Pas un dispositif médical.
+
+Si un fait change (prix, fonctionnalité), Mehdi le met à jour ici.
+
+## Sources d'inspiration
+
+Dans le dépôt `mehdi-cerveau` (le coffre de Mehdi), en lecture seule :
+- `90 Notion (copie)/CLAUDE Workspace (318ef5c7)/Thèse fondatrice — Mon Miroir/` : la thèse (connaissance de soi comme ancre à l'ère de l'IA) et la banque d'articles Founder Trace (questions d'introspection, distinctions utiles).
+- `10 Mon Miroir/Produit/Retours utilisateurs.md` : ce que les utilisateurs ressentent et formulent.
+- `10 Mon Miroir/Contenu/Réponses aux avis des stores.md` : ce que disent les avis App Store et Google Play.
+- `10 Mon Miroir/Contenu/` : les contenus déjà publiés.
+
+Ne jamais citer nommément un utilisateur ni rien qui permette de l'identifier. Une citation d'utilisateur n'est utilisée que si Mehdi l'a déjà rendue publique ou l'a validée.
+
+## Structure d'un article
+
+Tout le site est dans le dossier `site/`. Copier la structure de `site/je-narrive-pas-a-me-comprendre/index.html` (en-tête, pied de page, données structurées) et garder cet ordre :
+
+1. `<title>` et `<h1>` qui reprennent la phrase cherchée, presque mot pour mot.
+2. Une phrase d'accroche (`.lead`), puis l'auteur et la date.
+3. **« En bref »** (`.answer`) : la réponse complète en 3 à 5 phrases. C'est le passage que les IA reprennent : il doit tenir seul.
+4. Le corps : à quoi ça ressemble, pourquoi ça arrive, ce qui aide. Des titres `h2` formulés comme des questions ou des idées claires.
+5. **« Essaie maintenant »** : 3 à 5 questions dans le bloc `.questions`.
+6. La présentation de Mon Miroir, reliée au sujet de l'article, puis l'encadré `.cta` avec le lien `https://monmiroir.net/app?s=guide-<slug>` (le suivi des clics en dépend).
+7. L'encadré `.care` si le sujet est sensible.
+8. Une FAQ de 3 à 5 questions, reprises à l'identique dans le JSON-LD `FAQPage`.
+9. « À lire aussi » : 2 ou 3 liens vers d'autres guides.
+
+Longueur visée : 1 200 à 1 800 mots. Fichier : `site/<slug>/index.html`, slug court, sans accents, avec des tirets.
+
+## À mettre à jour avec chaque nouvel article
+
+- `site/sitemap.xml` : ajouter l'adresse avec la date du jour.
+- `site/llms.txt` : ajouter une ligne dans « Guides ».
+- `site/index.html` : ajouter une carte dans « Les guides », article le plus récent en haut.
+- Ajouter un lien vers le nouvel article dans 1 ou 2 articles existants proches.
+
+## Circuit de validation
+
+1. L'agent écrit l'article sur une nouvelle branche et ouvre une pull request.
+2. Cloudflare génère automatiquement un lien d'aperçu : Mehdi lit l'article sur son téléphone.
+3. Mehdi valide en fusionnant la pull request (bouton « Merge »), et l'article est en ligne dans la minute. Ou il laisse un commentaire, et l'agent corrige.
+
+Rien n'est publié sans la validation de Mehdi.
+
+## Réserve de sujets
+
+Chaque sujet part d'une phrase réellement tapée. Cocher quand c'est publié.
+
+**Se comprendre**
+- [x] Je n'arrive pas à me comprendre
+- [ ] Je ne sais plus ce que je veux
+- [ ] Pourquoi je réagis toujours de la même façon (schémas répétitifs)
+- [ ] Comment faire une introspection seul, par où commencer
+- [ ] Je réfléchis trop : comment arrêter de ruminer
+- [ ] Qui suis-je vraiment : questions pour se connaître
+
+**Travail**
+- [ ] Je ne sais plus ce que je veux dans mon travail
+- [ ] Je n'ai plus de motivation au travail et je ne sais pas pourquoi
+- [ ] Changer de métier : comment savoir si c'est la bonne décision
+- [ ] Syndrome de l'imposteur : comprendre d'où il vient chez toi
+
+**Relations**
+- [ ] Pourquoi je répète les mêmes schémas en amour
+- [ ] Comment savoir si je dois quitter quelqu'un
+- [ ] J'ai peur de décevoir les autres
+- [ ] Je n'arrive pas à dire non
+
+**Émotions**
+- [ ] Je ne comprends pas mes émotions
+- [ ] Pourquoi je m'énerve pour rien
+- [ ] Je me sens vide sans raison (avec encadré prudence)
+
+**Décisions**
+- [ ] Comment prendre une décision quand on est perdu
+- [ ] Je n'arrive pas à me décider : pourquoi, et comment débloquer
+
+**IA et introspection**
+- [x] IA d'introspection
+- [x] Mon Miroir ou ChatGPT
+- [ ] Journal intime avec IA : écrire pour mieux se comprendre
+- [ ] Quelles questions poser à une IA pour mieux se connaître
+- [ ] Se connaître soi-même à l'ère de l'IA (la thèse de Mon Miroir)
