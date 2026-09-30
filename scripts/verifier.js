@@ -70,6 +70,34 @@ for (const p of pages) {
   }
 }
 
+// Anti-répétition : deux articles ne doivent pas dire la même chose.
+// Mesure de recouvrement (Jaccard) sur le titre, le bloc « En bref » et le corps.
+// Seuils réglés le 30/09/2026 : entre articles distincts, le corps se recoupe à 10 % au plus.
+const MOTS_VIDES = new Set('a au aux avec ce ces cet cette comment dans de des du elle en est et etre il je la le les leur lui ma me mes moi mon ne ni nos notre on ou par pas pour qu que qui quoi sa se ses si son sur ta te tes toi ton tu un une vos votre vous plus ca'.split(' '));
+const mots = t => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/<[^>]+>/g, ' ')
+  .replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(w => w.length > 2 && !MOTS_VIDES.has(w));
+const groupes = (w, n) => { const s = new Set(); for (let i = 0; i + n <= w.length; i++) s.add(w.slice(i, i + n).join(' ')); return s; };
+const jaccard = (a, b) => { let i = 0; for (const x of a) if (b.has(x)) i++; const u = a.size + b.size - i; return u ? i / u : 0; };
+const articles = pages.filter(p => !PAGES_HORS_ARTICLE.has(p)).map(p => {
+  const s = fs.readFileSync(path.join(SITE, p), 'utf8');
+  const extrait = re => ((s.match(re) || [])[1] || '');
+  return {
+    p,
+    titre: new Set(mots(extrait(/<h1>([\s\S]*?)<\/h1>/))),
+    bref: groupes(mots(extrait(/class="answer">([\s\S]*?)<\/div>/)), 2),
+    corps: groupes(mots(extrait(/<main>([\s\S]*?)<\/main>/)), 3),
+  };
+});
+for (let i = 0; i < articles.length; i++) {
+  for (let j = i + 1; j < articles.length; j++) {
+    const a = articles[i], b = articles[j];
+    const t = jaccard(a.titre, b.titre), br = jaccard(a.bref, b.bref), c = jaccard(a.corps, b.corps);
+    if (t >= 0.5 || br >= 0.4 || c >= 0.18) {
+      err(`${a.p} et ${b.p}`, `trop proches (titre ${Math.round(t * 100)} %, En bref ${Math.round(br * 100)} %, corps ${Math.round(c * 100)} %) : l'article le plus récent doit apporter un angle vraiment nouveau, ou enrichir l'ancien au lieu de le répéter`);
+    }
+  }
+}
+
 if (erreurs.length) {
   console.log(`❌ ${erreurs.length} problème(s) :\n- ` + erreurs.join('\n- '));
   process.exit(1);

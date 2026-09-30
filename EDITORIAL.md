@@ -12,10 +12,14 @@ Axe de marque prioritaire : **Mon Miroir, l'IA qui te pose des questions.** Beau
 
 Finalité de chaque article : provoquer une prise de conscience. Les guides sont des guides de questionnement : ils mettent en lumière ce qui existe déjà chez la personne, par les questions qu'elle se pose sur elle-même. On ne lui apprend pas qui elle est, on l'aide à le voir.
 
+Question centrale de toute la ligne éditoriale : **« Et si on repensait la manière dont on utilise l'IA pour réfléchir sur soi ? »** Chaque article en est une variation, sous un angle qui lui est propre.
+
 Phrase d'identité, à garder cohérente partout :
 > Mon Miroir, l'IA qui te questionne. Elle ne te donne pas la réponse. Elle te pose les bonnes questions, qui font apparaître tes propres réponses.
 
 ## Les 3 règles non négociables
+
+0. **Une page = une intention distincte, avec une vraie valeur nouvelle.** Avant d'écrire, lister les articles existants proches et écrire en une phrase ce que ce nouvel article apporte qu'aucun autre n'apporte (situation différente, public différent, question différente, méthode différente). Si cette phrase est impossible à écrire, on n'écrit pas l'article : on enrichit l'article existant ou on choisit un autre sujet. Le contrôleur bloque automatiquement un article dont le titre, le bloc « En bref » ou le corps recouvre trop un article existant.
 
 1. **Qualité plutôt que volume.** Un article = une intention précise (« je ne sais plus ce que je veux au travail »), jamais un sujet vague (« le travail »). Si le sujet recouvre un article existant, on enrichit l'existant au lieu d'en créer un nouveau.
 2. **Chaque article applique la méthode Mon Miroir.** Pas de « 10 astuces ». On explique ce qui se passe, puis on donne **3 à 5 questions à se poser**, une à la fois, en entonnoir (fait, ressenti, sens, lien). Le lecteur doit vivre un avant-goût de l'app.
