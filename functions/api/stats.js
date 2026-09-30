@@ -24,7 +24,15 @@ export async function calculerStats(env, origine, jours) {
       .filter(p => p.sansVisiteur || p.sansRobotIA);
   } catch (e) { /* sitemap illisible : on s'en passe */ }
 
-  return { periode_jours: jours, depuis, humainsParPage, provenances, robotsParNom, robotsParPage, parJour, pagesMuettes };
+  let listeAttente = { total: 0, parLangue: [], parPays: [] };
+  try {
+    const tot = await q(`SELECT COUNT(*) n FROM liste_attente`);
+    listeAttente = { total: tot[0] ? tot[0].n : 0,
+      parLangue: await q(`SELECT langue, COUNT(*) n FROM liste_attente GROUP BY langue ORDER BY n DESC`),
+      parPays: await q(`SELECT pays, COUNT(*) n FROM liste_attente GROUP BY pays ORDER BY n DESC`) };
+  } catch (e) { /* table pas encore créée : personne inscrit */ }
+
+  return { listeAttente, periode_jours: jours, depuis, humainsParPage, provenances, robotsParNom, robotsParPage, parJour, pagesMuettes };
 }
 
 export async function onRequest({ request, env }) {

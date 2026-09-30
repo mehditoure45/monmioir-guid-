@@ -40,11 +40,14 @@ th,td{text-align:left;padding:8px 12px;border-bottom:1px solid #26263a}th{color:
   <div class="chiffre"><b>${total(s.provenances.filter(p => ['ChatGPT', 'Perplexity', 'Claude', 'Gemini', 'Copilot', 'Mistral'].includes(p.provenance)))}</b><span>visiteurs venus d'une IA</span></div>
   <div class="chiffre"><b>${total(s.robotsParNom)}</b><span>passages de robots</span></div>
   <div class="chiffre"><b>${s.pagesMuettes.filter(p => p.sansVisiteur).length}</b><span>pages sans visiteur</span></div>
+  <div class="chiffre"><b>${s.listeAttente.total}</b><span>inscrits liste d'attente (autres langues)</span></div>
 </div>
 ${tableau('Articles les plus lus (humains)', s.humainsParPage, [['Page', 'page'], ['Visites', 'n']])}
 ${tableau('D\'où viennent les visiteurs', s.provenances, [['Provenance', 'provenance'], ['Visites', 'n']])}
 ${tableau('Robots qui lisent le site', s.robotsParNom, [['Robot', 'robot'], ['Passages', 'n']])}
 ${tableau('Quel robot lit quelle page', s.robotsParPage, [['Page', 'page'], ['Robot', 'robot'], ['Passages', 'n']])}
+${tableau('Liste d\'attente : par langue demandée', s.listeAttente.parLangue, [['Langue', 'langue'], ['Inscrits', 'n']])}
+${tableau('Liste d\'attente : par pays', s.listeAttente.parPays, [['Pays', 'pays'], ['Inscrits', 'n']])}
 ${tableau('Pages à retravailler (sans visiteur ou jamais lues par une IA)', muettes, [['Page', 'page'], ['Visiteurs humains', 'humains'], ['Robots d\'IA', 'ia']])}
 </div></body></html>`;
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
