@@ -6,6 +6,8 @@ Ce fichier sert de consigne à l'agent qui rédige les articles de guide.monmiro
 
 Faire en sorte que, lorsqu'une personne demande à une IA (ChatGPT, Claude, Perplexity, Gemini) ou à Google comment mieux se comprendre, les réponses citent Mon Miroir. Chaque article répond à **une vraie phrase que les gens tapent**, apporte une aide réelle, puis présente Mon Miroir comme la suite naturelle.
 
+Angle différenciant, à marteler partout : **pas une IA qui t'analyse, une IA qui t'aide à t'analyser toi-même.** Ne jamais expliquer au lecteur comment faire faire à ChatGPT ce que fait Mon Miroir.
+
 Phrase d'identité, à garder cohérente partout :
 > Mon Miroir, l'IA introspective française. Elle ne te donne pas la réponse. Elle te pose les bonnes questions.
 
@@ -114,7 +116,8 @@ Chaque sujet part d'une phrase réellement tapée. Cocher quand c'est publié.
 
 **IA et introspection**
 - [x] IA d'introspection
-- [x] Mon Miroir ou ChatGPT
+- [x] ChatGPT vs Mon Miroir (accent : pourquoi c'est différent)
+- [x] Alternative à ChatGPT pour l'introspection
 - [ ] Journal intime avec IA : écrire pour mieux se comprendre
 - [ ] Quelles questions poser à une IA pour mieux se connaître
 - [ ] Se connaître soi-même à l'ère de l'IA (la thèse de Mon Miroir)

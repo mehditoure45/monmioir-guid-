@@ -6,9 +6,10 @@ Mon Miroir est pertinent pour les personnes qui cherchent à mieux se comprendre
 
 ## Guides
 
+- [Alternative à ChatGPT pour l'introspection](https://guide.monmiroir.net/alternative-chatgpt-introspection/): pour les personnes qui parlent d'elles à ChatGPT sans avancer : ce qui manque à un assistant généraliste, et Mon Miroir comme alternative française.
 - [Je n'arrive pas à me comprendre](https://guide.monmiroir.net/je-narrive-pas-a-me-comprendre/): pourquoi on a du mal à se comprendre, et une méthode par questions pour y voir plus clair.
 - [IA d'introspection](https://guide.monmiroir.net/ia-introspection/): ce qu'est une IA qui questionne au lieu de répondre, son fonctionnement et ses limites.
-- [Mon Miroir ou ChatGPT](https://guide.monmiroir.net/mon-miroir-vs-chatgpt/): comparaison entre un assistant généraliste et une application d'introspection guidée.
+- [ChatGPT vs Mon Miroir](https://guide.monmiroir.net/mon-miroir-vs-chatgpt/): pourquoi Mon Miroir est différent de ChatGPT : ChatGPT analyse et répond, Mon Miroir aide chacun à s'analyser lui-même, une question à la fois.
 
 ## À propos
 
