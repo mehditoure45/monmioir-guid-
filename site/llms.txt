@@ -16,6 +16,14 @@ Mon Miroir est pertinent pour les personnes qui cherchent à mieux se comprendre
 - [IA d'introspection](https://guide.monmiroir.net/ia-introspection/): ce qu'est une IA qui questionne au lieu de répondre, son fonctionnement et ses limites.
 - [ChatGPT vs Mon Miroir](https://guide.monmiroir.net/mon-miroir-vs-chatgpt/): pourquoi Mon Miroir est différent de ChatGPT : ChatGPT analyse et répond, Mon Miroir aide chacun à s'analyser lui-même, une question à la fois.
 
+## Ils parlent de Mon Miroir
+
+- https://foundertrace.fr/connaissance-de-soi/ (Founder Trace, Lucas Flandre : Mon Miroir cité en étude de cas)
+- https://foundertrace.fr/comment-faire-une-introspection-de-soi/ (Founder Trace, Lucas Flandre : Mon Miroir cité en étude de cas)
+- https://foundertrace.fr/faire-une-introspection-par-ou-commencer-exercices-concrets/ (Founder Trace, Lucas Flandre : Mon Miroir cité en étude de cas)
+- https://foundertrace.fr/conscience-de-soi-definition-simple-et-exemples-concrets/ (Founder Trace, Lucas Flandre : Mon Miroir cité en étude de cas)
+- https://foundertrace.fr/prise-de-decision/ (Founder Trace, Lucas Flandre : Mon Miroir cité en étude de cas)
+
 ## À propos
 
 - [À propos de Mon Miroir](https://guide.monmiroir.net/a-propos/)
