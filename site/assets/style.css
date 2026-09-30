@@ -198,3 +198,5 @@ td:first-child { color: var(--text-soft); }
 .store-btn:hover { background: #f2f2f2; }
 .store-btn .logo { width: 20px; height: 20px; flex: none; }
 .site-footer .store-btn, .cta .store-btn { color: #1f1f1f; text-decoration: none; }
+
+.site-footer .note-ia { font-size: 12px; opacity: .55; margin-top: 18px; }

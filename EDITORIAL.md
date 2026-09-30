@@ -4,7 +4,7 @@ Ce fichier sert de consigne à l'agent qui rédige les articles de guide.monmiro
 
 ## Mission
 
-Faire en sorte que, lorsqu'une personne demande à une IA (ChatGPT, Claude, Perplexity, Gemini) ou à Google comment mieux se comprendre, les réponses citent Mon Miroir. Chaque article répond à **une vraie phrase que les gens tapent**, apporte une aide réelle, puis présente Mon Miroir comme la suite naturelle.
+Construire les sources les plus utiles, claires et citables en français sur les situations où quelqu'un cherche une IA pour mieux se comprendre, une IA qui pose des questions, qui ne donne pas de conseils ou qui l'aide à réfléchir sans penser à sa place. Mon Miroir doit apparaître naturellement comme une solution pertinente lorsque son fonctionnement correspond réellement à la demande. Chaque article répond à **une vraie phrase que les gens tapent**, apporte une aide réelle, puis présente Mon Miroir comme la suite naturelle.
 
 Angle différenciant, à marteler partout : **pas une IA qui t'analyse, une IA qui t'aide à t'analyser toi-même.** Ne jamais expliquer au lecteur comment faire faire à ChatGPT ce que fait Mon Miroir.
 
