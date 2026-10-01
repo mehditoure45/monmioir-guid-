@@ -14,6 +14,8 @@ Finalité de chaque article : provoquer une prise de conscience. Les guides sont
 
 Question centrale de toute la ligne éditoriale : **« Et si on repensait la manière dont on utilise l'IA pour réfléchir sur soi ? »** Chaque article en est une variation, sous un angle qui lui est propre.
 
+Ne jamais écrire que Mon Miroir ne donne aucun conseil : elle questionne d'abord et ne propose des pistes qu'à la fin.
+
 Phrase d'identité, à garder cohérente partout :
 > Mon Miroir, l'IA qui te questionne. Elle ne te donne pas la réponse. Elle te pose les bonnes questions, qui font apparaître tes propres réponses.
 
@@ -40,13 +42,29 @@ Phrase d'identité, à garder cohérente partout :
 ## Faits sur Mon Miroir (les seuls à utiliser)
 
 - Application française d'introspection guidée par IA, créée par Mehdi Touré.
-- Principe : l'IA questionne, une question à la fois, elle ne donne ni conseils ni diagnostic. Un miroir, pas un gourou.
+- Principe (description exacte validée par Mehdi le 01/10/2026) :
+  - Parcours : Mon Miroir te questionne, une question à la fois, pour que tu prennes conscience par toi-même de ce que tu vis réellement. À la fin du parcours, la phrase-miroir te révèle tes propres réponses. Ensuite seulement, l'appli te propose des axes de réflexion ou d'action adaptés à ta situation.
+  - Discussion libre : elle répond brièvement à ce que tu viens de dire, puis te repose une question. C'est un échange, avec un questionnement constant pour t'aider à y voir plus clair.
+  - Mon Miroir ne commence jamais par un conseil. Les pistes arrivent à la fin, après ta propre prise de conscience, et elles partent de ce que tu as dit. Elle ne pose aucun diagnostic médical ou psychologique.
+  - Face aux autres applis : « Les autres applis analysent ce que tu écris. Mon Miroir te questionne jusqu'à ce que tu le voies toi-même, et ne propose des pistes qu'après. »
+  - Un miroir, pas un gourou.
 - Briques : parcours guidés par thème (émotions, relations, confiance en soi, décisions, travail…), phrase-miroir en fin de parcours, journal, mémoire persistante, cartographie intérieure.
 - Disponible sur App Store (https://apps.apple.com/app/id6801134262), Google Play (https://play.google.com/store/apps/details?id=net.monmiroir.app) et sur le web (https://monmiroir.net).
 - Gratuit pour commencer : 2 parcours, 10 messages de discussion, 10 dépôts de journal. Premium : 9,99 €/mois ou 59,99 €/an.
 - Réservée aux adultes. Pas un dispositif médical.
 
 Si un fait change (prix, fonctionnalité), Mehdi le met à jour ici.
+
+## Comparatifs et fiches
+
+- Un concurrent n'est cité qu'avec des faits vérifiés sur son site officiel, fournis dans les notes Notion, avec le lien et la date de vérification.
+- Aucun dénigrement.
+- Comparatif par besoin, jamais de « Top 10 ».
+- Dire clairement quand Mon Miroir n'est pas le bon choix.
+- Prix dans la devise d'origine.
+- Aucun nombre d'avis ni aucune note.
+- Ne jamais dire que les données sont plus protégées que chez ChatGPT.
+- Ne rien écrire sur ce qu'OpenAI conserve.
 
 ## Sources d'inspiration
 
