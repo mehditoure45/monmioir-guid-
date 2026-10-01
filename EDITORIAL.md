@@ -61,6 +61,7 @@ Si un fait change (prix, fonctionnalité), Mehdi le met à jour ici.
 - Aucun dénigrement.
 - Comparatif par besoin, jamais de « Top 10 ».
 - Dire clairement quand Mon Miroir n'est pas le bon choix.
+- Toute page qui dit dans quels cas Mon Miroir n'est pas le bon choix doit d'abord dire, dans une liste à puces au moins aussi développée et placée avant, dans quels cas Mon Miroir est le bon choix (puces concrètes commençant par « Tu »).
 - Prix dans la devise d'origine.
 - Aucun nombre d'avis ni aucune note.
 - Ne jamais dire que les données sont plus protégées que chez ChatGPT.
