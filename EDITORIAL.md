@@ -129,7 +129,7 @@ Chaque sujet part d'une phrase réellement tapée. Cocher quand c'est publié.
 - [ ] Pourquoi je réagis toujours de la même façon (schémas répétitifs)
 - [ ] Comment faire une introspection seul, par où commencer
 - [x] Je réfléchis trop : comment arrêter de ruminer (traité par « Je tourne en rond dans ma tête »)
-- [ ] Qui suis-je vraiment : questions pour se connaître
+- [x] Qui suis-je vraiment : questions pour se connaître
 
 **Travail**
 - [x] Je ne sais plus ce que je veux dans mon travail
