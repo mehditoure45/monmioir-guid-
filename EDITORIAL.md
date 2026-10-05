@@ -121,7 +121,7 @@ Chaque sujet part d'une phrase réellement tapée. Cocher quand c'est publié.
 - [x] Je ne veux pas de conseils : aide-moi à comprendre ce que je ressens
 - [ ] Utiliser l'IA pour mieux se connaître
 - [x] Aide-moi à trouver mes schémas : une IA pour repérer ce qui se répète
-- [ ] Journaliser avec ChatGPT : écrire son journal avec une IA
+- [x] Journaliser avec ChatGPT : écrire son journal avec une IA
 
 **Se comprendre**
 - [x] Je n'arrive pas à me comprendre
@@ -156,6 +156,6 @@ Chaque sujet part d'une phrase réellement tapée. Cocher quand c'est publié.
 - [x] IA d'introspection
 - [x] ChatGPT vs Mon Miroir (accent : pourquoi c'est différent)
 - [x] Alternative à ChatGPT pour l'introspection
-- [ ] Journal intime avec IA : écrire pour mieux se comprendre
+- [x] Journal intime avec IA : écrire pour mieux se comprendre (traité par « Journal intime avec ChatGPT »)
 - [ ] Quelles questions poser à une IA pour mieux se connaître
 - [ ] Se connaître soi-même à l'ère de l'IA (la thèse de Mon Miroir)
