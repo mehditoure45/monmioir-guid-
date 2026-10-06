@@ -71,11 +71,11 @@ def main():
             print(f'(fil illisible) {c["lien"]}\n'); continue
         post = fil[0]
         op = post['auteur']
-        reponses = [e for e in fil[1:] if e['auteur'] != pseudo and id_de(e['lien']) != id_de(c['lien'])]
+        reponses = [e for e in fil[1:] if e['auteur'] not in (pseudo, '', '[deleted]') and e['texte'] not in ('[deleted]', '[removed]') and id_de(e['lien']) != id_de(c['lien'])]
         time.sleep(7)
         tout = entrees(flux(post['lien'] + '.rss?limit=100'))
         for e in tout[1:]:
-            if e['auteur'] == op and e['date'] > c['date'] and all(e['lien'] != r['lien'] for r in reponses):
+            if op not in ('', '[deleted]') and e['auteur'] == op and e['texte'] not in ('[deleted]', '[removed]') and e['date'] > c['date'] and all(e['lien'] != r['lien'] for r in reponses):
                 e['op_ailleurs'] = True
                 reponses.append(e)
         titre = post['lien'].rstrip('/').split('/')[-1]
