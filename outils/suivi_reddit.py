@@ -90,6 +90,7 @@ def main():
             print(f' [{etat}] {qui} u/{r["auteur"]} {r["date"][:16]}{ou}\n  {r["lien"]}\n  {r["texte"][:1500]}')
             if rid not in vus:
                 nouveaux.append(rid)
+                vus.add(rid)
         print()
     if fichier_vus and nouveaux:
         with open(fichier_vus, 'a') as f:
