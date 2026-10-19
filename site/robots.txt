@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /sortie/
 
 Sitemap: https://guide.monmiroir.net/sitemap.xml

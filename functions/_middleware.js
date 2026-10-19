@@ -3,6 +3,8 @@
 // et d'où vient le visiteur humain (ChatGPT, Perplexity, Google...).
 // Rien de personnel n'est stocké : ni adresse IP, ni identifiant, seulement le pays.
 // Base D1 liée sous le nom DB. Sans base liée, le site fonctionne normalement, sans journal.
+// Pour les visiteurs humains, les liens vers l'App Store, Google Play et l'app passent par /sortie/,
+// qui compte le clic puis renvoie vers le store. Les robots voient toujours les liens directs.
 
 const ROBOTS = [
   ['GPTBot', 'ChatGPT (entraînement)'],
@@ -41,6 +43,9 @@ const TABLE = `CREATE TABLE IF NOT EXISTS visites (
   jour TEXT NOT NULL, page TEXT NOT NULL, robot TEXT, provenance TEXT, pays TEXT
 )`;
 
+// Liens comptés : stores et page de téléchargement de l'app (pas les mentions légales ni la confidentialité).
+const SORTIES = /^https:\/\/(apps\.apple\.com\/|play\.google\.com\/|monmiroir\.net\/app)/;
+
 export async function onRequest(context) {
   const reponse = await context.next();
   try {
@@ -48,9 +53,10 @@ export async function onRequest(context) {
     const url = new URL(request.url);
     const estPage = request.method === 'GET' && (url.pathname.endsWith('/') || url.pathname.endsWith('.html'));
     const exclu = url.pathname.startsWith('/tableau-de-bord') || url.pathname.startsWith('/api/');
-    if (env.DB && estPage && !exclu && reponse.status < 400) {
-      const ua = request.headers.get('user-agent') || '';
-      const robot = (ROBOTS.find(([cle]) => ua.toLowerCase().includes(cle.toLowerCase())) || [])[1] || null;
+    if (!estPage || exclu || reponse.status >= 400) return reponse;
+    const ua = request.headers.get('user-agent') || '';
+    const robot = (ROBOTS.find(([cle]) => ua.toLowerCase().includes(cle.toLowerCase())) || [])[1] || null;
+    if (env.DB) {
       let provenance = null;
       if (!robot) {
         const ref = request.headers.get('referer') || '';
@@ -67,8 +73,26 @@ export async function onRequest(context) {
           .bind(jour, url.pathname, robot, provenance, pays).run();
       })());
     }
+    if (!robot && (reponse.headers.get('content-type') || '').includes('text/html')) return compterLesSorties(reponse);
   } catch (e) {
     // Le journal ne doit jamais casser le site.
   }
   return reponse;
+}
+
+// Réécrit les liens vers les stores en /sortie/<emplacement>?vers=<lien d'origine>.
+// L'emplacement (menu, article, pied) dit quel bouton a été cliqué ; la page d'origine est lue par /sortie/ dans le Referer.
+function compterLesSorties(reponse) {
+  let zone = 'article';
+  const suivreZone = nom => ({ element(el) { zone = nom; el.onEndTag(() => { zone = 'article'; }); } });
+  return new HTMLRewriter()
+    .on('.site-header', suivreZone('menu'))
+    .on('.site-footer', suivreZone('pied'))
+    .on('a[href]', {
+      element(a) {
+        const href = (a.getAttribute('href') || '').replace(/&amp;/g, '&');
+        if (SORTIES.test(href)) a.setAttribute('href', `/sortie/${zone}?vers=${encodeURIComponent(href)}`);
+      },
+    })
+    .transform(reponse);
 }
