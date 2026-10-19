@@ -32,7 +32,23 @@ export async function calculerStats(env, origine, jours) {
       parPays: await q(`SELECT pays, COUNT(*) n FROM liste_attente GROUP BY pays ORDER BY n DESC`) };
   } catch (e) { /* table pas encore créée : personne inscrit */ }
 
-  return { listeAttente, periode_jours: jours, depuis, humainsParPage, provenances, robotsParNom, robotsParPage, parJour, pagesMuettes };
+  // Clics vers l'App Store, Google Play et l'app (comptés par /sortie/ depuis le 19/10/2026)
+  let clics = { total: 0, parDestination: [], parEmplacement: [], parPage: [], tauxParPage: [] };
+  try {
+    const [parDestination, parEmplacement, parPage] = await Promise.all([
+      q(`SELECT destination, COUNT(*) n FROM clics WHERE jour >= ? GROUP BY destination ORDER BY n DESC`, depuis),
+      q(`SELECT emplacement, COUNT(*) n FROM clics WHERE jour >= ? GROUP BY emplacement ORDER BY n DESC`, depuis),
+      q(`SELECT page, destination, COUNT(*) n FROM clics WHERE jour >= ? GROUP BY page, destination ORDER BY n DESC`, depuis),
+    ]);
+    const parPageTotal = {};
+    for (const r of parPage) parPageTotal[r.page] = (parPageTotal[r.page] || 0) + r.n;
+    const tauxParPage = humainsParPage.filter(r => parPageTotal[r.page])
+      .map(r => ({ page: r.page, visites: r.n, clics: parPageTotal[r.page], taux: `${Math.round(100 * parPageTotal[r.page] / r.n)} %` }))
+      .sort((a, b) => b.clics - a.clics);
+    clics = { total: parDestination.reduce((a, r) => a + r.n, 0), parDestination, parEmplacement, parPage, tauxParPage };
+  } catch (e) { /* table pas encore créée : aucun clic */ }
+
+  return { listeAttente, periode_jours: jours, depuis, humainsParPage, provenances, robotsParNom, robotsParPage, parJour, pagesMuettes, clics };
 }
 
 export async function onRequest({ request, env }) {

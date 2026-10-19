@@ -38,11 +38,15 @@ th,td{text-align:left;padding:8px 12px;border-bottom:1px solid #26263a}th{color:
 <div class="chiffres">
   <div class="chiffre"><b>${total(s.humainsParPage)}</b><span>visites humaines</span></div>
   <div class="chiffre"><b>${total(s.provenances.filter(p => ['ChatGPT', 'Perplexity', 'Claude', 'Gemini', 'Copilot', 'Mistral'].includes(p.provenance)))}</b><span>visiteurs venus d'une IA</span></div>
+  <div class="chiffre"><b>${s.clics.total}</b><span>clics vers l'app (stores)</span></div>
   <div class="chiffre"><b>${total(s.robotsParNom)}</b><span>passages de robots</span></div>
   <div class="chiffre"><b>${s.pagesMuettes.filter(p => p.sansVisiteur).length}</b><span>pages sans visiteur</span></div>
   <div class="chiffre"><b>${s.listeAttente.total}</b><span>inscrits liste d'attente (autres langues)</span></div>
 </div>
 ${tableau('Articles les plus lus (humains)', s.humainsParPage, [['Page', 'page'], ['Visites', 'n']])}
+${tableau('Articles qui envoient vers l\'app', s.clics.tauxParPage, [['Page', 'page'], ['Visites', 'visites'], ['Clics', 'clics'], ['Taux', 'taux']])}
+${tableau('Clics par destination', s.clics.parDestination, [['Destination', 'destination'], ['Clics', 'n']])}
+${tableau('Clics par bouton', s.clics.parEmplacement, [['Bouton', 'emplacement'], ['Clics', 'n']])}
 ${tableau('D\'où viennent les visiteurs', s.provenances, [['Provenance', 'provenance'], ['Visites', 'n']])}
 ${tableau('Robots qui lisent le site', s.robotsParNom, [['Robot', 'robot'], ['Passages', 'n']])}
 ${tableau('Quel robot lit quelle page', s.robotsParPage, [['Page', 'page'], ['Robot', 'robot'], ['Passages', 'n']])}

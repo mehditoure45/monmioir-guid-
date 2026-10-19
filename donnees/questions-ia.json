@@ -1,0 +1,25 @@
+{
+  "note": "Questions posées chaque lundi à ChatGPT et Perplexity par scripts/score-ia.js. Les 10 premières sont celles du test IA du Pilote GEO (Notion, 02/10/2026). Ne jamais modifier ni retirer une question : on compare les semaines entre elles. L'agent stratège peut en ajouter au plus 2 par mois (nouvel id, à la fin). type = generique (compte dans le score) ou marque (on vérifie que la description de Mon Miroir est juste).",
+  "questions": [
+    { "id": "q01", "type": "generique", "question": "Quelle application pour mieux me comprendre ?" },
+    { "id": "q02", "type": "generique", "question": "Je cherche une IA qui me pose des questions au lieu de me donner des conseils, tu connais ?" },
+    { "id": "q03", "type": "generique", "question": "Quelle alternative à ChatGPT pour faire de l'introspection en français ?" },
+    { "id": "q04", "type": "generique", "question": "Quelle est la meilleure application d'introspection en français ?" },
+    { "id": "q05", "type": "generique", "question": "Une application de journal intime avec IA en français ?" },
+    { "id": "q06", "type": "generique", "question": "Je tourne en rond dans ma tête, quelle appli peut m'aider à y voir clair ?" },
+    { "id": "q07", "type": "generique", "question": "Je ne sais plus ce que je veux dans ma vie, existe-t-il une appli pour m'aider à réfléchir ?" },
+    { "id": "q08", "type": "generique", "question": "Quelle application pour comprendre mes schémas répétitifs ?" },
+    { "id": "q09", "type": "marque", "question": "Que vaut l'application Mon Miroir ?" },
+    { "id": "q10", "type": "generique", "question": "Quelle appli française de développement personnel avec IA me conseilles-tu ?" },
+    { "id": "q11", "type": "generique", "question": "Existe-t-il une IA qui ne me donne pas toujours raison ?" },
+    { "id": "q12", "type": "generique", "question": "Une IA qui me pose des questions une par une pour m'aider à réfléchir, ça existe ?" },
+    { "id": "q13", "type": "generique", "question": "Quelle IA utiliser pour mieux se connaître soi-même ?" },
+    { "id": "q14", "type": "generique", "question": "Quelles alternatives à Rosebud en français ?" },
+    { "id": "q15", "type": "generique", "question": "Une appli pour réfléchir à ma relation de couple sans qu'on me dise quoi faire ?" },
+    { "id": "q16", "type": "generique", "question": "Quelle application pour trouver mes valeurs profondes ?" },
+    { "id": "q17", "type": "generique", "question": "J'ai besoin de faire le point sur ma vie, quelle appli avec IA peut m'aider ?" },
+    { "id": "q18", "type": "generique", "question": "Une appli qui m'aide à prendre une décision en me posant des questions ?" },
+    { "id": "q19", "type": "marque", "question": "Mon Miroir ou ChatGPT pour l'introspection, lequel choisir ?" },
+    { "id": "q20", "type": "generique", "question": "Quelles sont les meilleures applications d'introspection avec IA en 2026 ?" }
+  ]
+}
