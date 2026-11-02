@@ -32,6 +32,9 @@ export async function onRequest({ request, env, params, waitUntil }) {
     const ref = new URL(request.headers.get('referer'));
     if (ref.host === url.host) page = ref.pathname;
   } catch (e) { /* navigateur qui ne transmet pas la page d'origine */ }
+  // Repli : la page d'origine écrite dans le lien par _middleware.js (paramètre depuis).
+  const depuis = url.searchParams.get('depuis') || '';
+  if (page === 'inconnue' && /^\/[a-z0-9\/._-]{0,150}$/.test(depuis)) page = depuis;
 
   if (destination === 'App Store' && CODE_FOURNISSEUR_APPLE && !vers.searchParams.has('pt')) {
     const slug = page === '/' ? 'accueil' : page.replace(/\//g, '');
