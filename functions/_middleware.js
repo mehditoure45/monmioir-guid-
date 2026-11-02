@@ -73,7 +73,7 @@ export async function onRequest(context) {
           .bind(jour, url.pathname, robot, provenance, pays).run();
       })());
     }
-    if (!robot && (reponse.headers.get('content-type') || '').includes('text/html')) return compterLesSorties(reponse);
+    if (!robot && (reponse.headers.get('content-type') || '').includes('text/html')) return compterLesSorties(reponse, url.pathname);
   } catch (e) {
     // Le journal ne doit jamais casser le site.
   }
@@ -81,8 +81,10 @@ export async function onRequest(context) {
 }
 
 // Réécrit les liens vers les stores en /sortie/<emplacement>?vers=<lien d'origine>.
-// L'emplacement (menu, article, pied) dit quel bouton a été cliqué ; la page d'origine est lue par /sortie/ dans le Referer.
-function compterLesSorties(reponse) {
+// L'emplacement (menu, article, pied) dit quel bouton a été cliqué ; la page d'origine est passée dans le lien
+// (paramètre depuis), car beaucoup de navigateurs et d'applis n'envoient pas le Referer.
+function compterLesSorties(reponse, chemin) {
+  const depuis = encodeURIComponent(chemin);
   let zone = 'article';
   const suivreZone = nom => ({ element(el) { zone = nom; el.onEndTag(() => { zone = 'article'; }); } });
   return new HTMLRewriter()
@@ -91,7 +93,7 @@ function compterLesSorties(reponse) {
     .on('a[href]', {
       element(a) {
         const href = (a.getAttribute('href') || '').replace(/&amp;/g, '&');
-        if (SORTIES.test(href)) a.setAttribute('href', `/sortie/${zone}?vers=${encodeURIComponent(href)}`);
+        if (SORTIES.test(href)) a.setAttribute('href', `/sortie/${zone}?vers=${encodeURIComponent(href)}&depuis=${depuis}`);
       },
     })
     .transform(reponse);
