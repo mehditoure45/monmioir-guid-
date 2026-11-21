@@ -1,0 +1,202 @@
+/* Guides Mon Miroir : feuille de style unique, reprend les couleurs de l'app */
+:root {
+  --bg: #0a0a0a;
+  --bg-2: #14142a;
+  --card: #1a1a30;
+  --text: #e7eaf0;
+  --text-soft: #a9b1c1;
+  --muted: #7f8aa0;
+  --accent: #8dcbe7;
+  --accent-soft: rgba(141, 203, 231, 0.12);
+  --border: #222b3d;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", "Inter", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+
+/* En-tête */
+.site-header { border-bottom: 1px solid var(--border); }
+.site-header .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding-top: 18px; padding-bottom: 18px;
+}
+.brand { font-family: var(--serif); font-size: 21px; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+.brand span { color: var(--accent); font-style: italic; }
+.brand img { width: 32px; height: 32px; border-radius: 8px; display: block; flex-shrink: 0; }
+.site-header nav { display: flex; gap: 18px; font-size: 15px; }
+.site-header nav a { color: var(--text-soft); text-decoration: none; }
+.site-header nav a:hover { color: var(--accent); }
+
+/* Article */
+main { padding: 40px 0 64px; }
+.breadcrumb { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+.breadcrumb a { color: var(--muted); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.25; color: var(--text); }
+h1 { font-size: clamp(30px, 6vw, 42px); margin: 0 0 16px; }
+h2 { font-size: clamp(24px, 4.5vw, 30px); margin: 48px 0 14px; }
+h3 { font-size: 21px; margin: 30px 0 10px; }
+.lead { font-size: 20px; color: var(--text-soft); margin: 0 0 20px; }
+.meta { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+p, ul, ol { margin: 0 0 18px; }
+li { margin-bottom: 8px; }
+strong { color: #fff; font-weight: 600; }
+
+/* Réponse courte en tête d'article */
+.answer {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 0 0 32px;
+}
+.answer p:last-child { margin-bottom: 0; }
+.answer .label {
+  display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 6px; font-weight: 600;
+}
+
+/* Questions miroir */
+.questions {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 24px 8px;
+  margin: 24px 0 28px;
+}
+.questions ol { padding-left: 22px; }
+.questions li { font-family: var(--serif); font-style: italic; font-size: 19px; margin-bottom: 14px; }
+
+/* Tableaux */
+.table-scroll { overflow-x: auto; margin: 20px 0 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 16px; min-width: 520px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { font-weight: 600; color: var(--accent); background: var(--card); }
+td:first-child { color: var(--text-soft); }
+
+/* Encadré app */
+.cta {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 26px;
+  margin: 44px 0;
+  text-align: center;
+}
+.cta h2, .cta h3 { margin-top: 0; }
+.cta p { color: var(--text-soft); }
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #0a0a0a;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 13px 26px;
+  border-radius: 999px;
+  margin-top: 6px;
+}
+.button:hover { filter: brightness(1.08); }
+.cta small { display: block; margin-top: 12px; color: var(--muted); font-size: 14px; }
+
+/* Encadré prudence */
+.care {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 16px;
+  color: var(--text-soft);
+  margin: 28px 0;
+}
+.care p:last-child { margin-bottom: 0; }
+
+/* FAQ */
+.faq details {
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+.faq summary { cursor: pointer; font-weight: 600; color: var(--text); }
+.faq details p { margin: 10px 0 0; color: var(--text-soft); }
+
+/* Liste des guides (accueil) */
+.cards { display: grid; gap: 16px; margin: 28px 0; }
+.card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  text-decoration: none;
+  color: var(--text);
+}
+.card:hover { border-color: var(--accent); }
+.card strong { font-family: var(--serif); font-weight: 500; font-size: 21px; display: block; margin-bottom: 6px; }
+.card span { color: var(--text-soft); font-size: 16px; }
+
+/* Pied de page */
+.site-footer { border-top: 1px solid var(--border); padding: 32px 0 48px; font-size: 15px; color: var(--muted); }
+.site-footer p { margin-bottom: 10px; }
+.site-footer a { color: var(--text-soft); }
+.related { margin: 40px 0 0; }
+.related ul { padding-left: 20px; }
+
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .site-header .wrap { flex-direction: column; align-items: flex-start; gap: 8px; }
+  main { padding-top: 28px; }
+}
+
+/* Boutons de téléchargement */
+.store-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 6px; }
+.store-buttons .button { margin-top: 0; }
+.footer-cta {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.footer-cta-title { color: var(--text); font-size: 17px; margin-bottom: 14px; }
+.footer-cta small { display: block; margin-top: 12px; }
+@media (max-width: 560px) {
+  .store-buttons { flex-direction: column; }
+  .store-buttons .button { text-align: center; }
+}
+.site-footer .button, .cta .button { color: #0a0a0a; text-decoration: none; }
+
+/* Boutons stores : même style que les boutons de connexion Apple et Google de l'app */
+.store-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-width: 200px;
+  background: #fff;
+  color: #1f1f1f;
+  border: 1px solid #747775;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+.store-btn:hover { background: #f2f2f2; }
+.store-btn .logo { width: 20px; height: 20px; flex: none; }
+.site-footer .store-btn, .cta .store-btn { color: #1f1f1f; text-decoration: none; }
+
+.site-footer .note-ia { font-size: 12px; opacity: .55; margin-top: 18px; }
